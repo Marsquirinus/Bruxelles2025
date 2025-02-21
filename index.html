@@ -5,8 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accès sécurisé</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-        input, button { padding: 10px; margin: 10px; font-size: 16px; }
+        body {
+            background-color: black;
+            color: #8B0000; /* Rouge foncé */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        h2 {
+            text-align: center;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+            border: 2px solid #8B0000;
+            background: none;
+            color: white;
+        }
+        button {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -16,11 +38,11 @@
 
     <script>
         function verifierCode() {
-            var codeCorrect = "Dimittis"; // Remplace par ton code
+            var codeCorrect = "1234"; // Remplace par ton code secret
             var input = document.getElementById("codeInput").value;
 
             if (input === codeCorrect) {
-                window.location.href = "https://drive.google.com/drive/folders/1_6iXxzLnoTiWuo6o2T7FOCY-_wkhPHb5?usp=drive_link; // Remplace XXXXX par l'ID de ton dossier
+                window.location.href = "https://drive.google.com/drive/folders/XXXXX"; // Remplace XXXXX par l'ID de ton dossier Google Drive
             } else {
                 alert("Code incorrect !");
             }
